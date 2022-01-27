@@ -1,0 +1,28 @@
+.content__list {
+  width: 85%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 1vh;
+}
+
+.list__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #F3F3F3;
+  border-radius: 8px;
+  height: 60px;
+  padding: 3% 3%;
+}
+
+.item__company-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.company-link__item {
+  display: block;
+
+}
