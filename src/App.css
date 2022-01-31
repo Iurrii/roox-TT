@@ -1,6 +1,5 @@
 /*общие стили*/
 
-
 html {
   width: 100%;
   min-height: 100%;
@@ -29,6 +28,7 @@ span {
   color: #FFFFFF;
   background: #4B51EF;
   border-radius: 5px;
+  padding: 1% 4%;
   font-style: normal;
   font-family: Roboto;
   font-size: 12px;
@@ -38,15 +38,7 @@ span {
 }
 
 
-.text {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 11px;
-  line-height: 13px;
-  color: #A3A3A3;
-  margin: 0;
-}
+
 
 .link {
   color:#4B51EF;
@@ -59,7 +51,11 @@ span {
 
 }
 
-/**/
+
+
+/*конец общих стилей*/
+
+
 
 .page-container {
   display: flex;
@@ -115,28 +111,7 @@ span {
  padding-top: 1vh;
 }
 
-.content__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 85%;
-  margin: auto;
-  margin-bottom: 1vh;
-}
 
-.header__title {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  color: #000000;
-}
-
-.header__btn-edit {
-  height: fit-content;
-  padding: 2% 4%;
-}
 
 
 /**/

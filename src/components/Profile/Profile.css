@@ -1,7 +1,28 @@
+.content__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+  margin-bottom: 1vh;
+}
+
+.header__title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.header__btn-edit {
+  padding: 1% 4%;
+}
+
 .content__form-wrapper {
   width: 85%;
   height: auto;
-  /* height: 463px; */
   margin: auto;
 }
 
@@ -56,6 +77,9 @@
 }
 
 .submit-container__form-submit {
-  padding: 1.5% 4%;
-  background: #AFAFAF !important;
+  background: #AFAFAF;
+}
+
+.editing {
+  background-color: #52CF4F;
 }

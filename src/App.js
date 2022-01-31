@@ -1,35 +1,74 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Card from './components/Card/Card.js';
+import { useEffect, useState } from 'react';
+
+
 import Profile from './components/Profile/Profile.js';
+import CardList from './components/CardList/CardList.js';
 
 function App() {
+
+  const [users, setUsers] = useState(null);
+  const [id, setId] = useState(null);
+  useEffect(() => {
+
+    getDateFromAPI();
+
+  }, []);
+
+
+
+  function getDateFromAPI() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((data) => {
+
+
+        setUsers(data);
+      })
+      .catch((err) => {
+        console.log(err);
+        alert(err.message);
+      });
+  }
+
+
+  function serchUserById(id) {
+    setId(id);
+  }
+
+  // console.log(users);
+  
+  // users && console.log(users[serchUserById(id)]);
+
+
   return (
     <BrowserRouter>
       <div className="App">
-        <div class="page-container">
+        <div className="page-container">
 
 
-          <div class="page-container__left-menu">
-            <nav class="left-menu__navbar">
-              <h3 class="navbar__title">Сортировка</h3>
-              <div class="navbar__navbar-btn-panel">
-                <button class="navbar-btn-panel__btn btn">по городу</button>
-                <button class="navbar-btn-panel__btn btn">по компании</button>
+          <div className="page-container__left-menu">
+            <nav className="left-menu__navbar">
+              <h3 className="navbar__title">Сортировка</h3>
+              <div className="navbar__navbar-btn-panel">
+                <button className="navbar-btn-panel__btn btn">по городу</button>
+                <button className="navbar-btn-panel__btn btn">по компании</button>
               </div>
             </nav>
           </div>
 
 
-          <div class="page-container__content">
-            <div class="content__header">
-              <h2 class="header__title">Список пользователей</h2>
-            </div>
+          <div className="page-container__content">
 
-            <Routes>
-              <Route path="/" element={<Card />} />
-              <Route path="/profile" element={<Profile />} />
-            </Routes>
+
+            {users &&
+              <Routes>
+                <Route path="/" element={<CardList users={users} />} />
+                <Route path="/profile/:id" element={<Profile getUserById={serchUserById} user={users[id - 1]} />} />
+              </Routes>
+            }
+
 
           </div>
         </div>
