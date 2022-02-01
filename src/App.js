@@ -10,11 +10,17 @@ function App() {
 
   const [users, setUsers] = useState(null);
   const [id, setId] = useState(null);
+
+
   useEffect(() => {
 
     getDateFromAPI();
 
   }, []);
+
+  useEffect(() => {
+
+  },[id])
 
 
 
