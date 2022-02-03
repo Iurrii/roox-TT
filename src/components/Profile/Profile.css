@@ -1,3 +1,20 @@
+/*стили-состояния-начало*/
+
+.editing {
+  background-color: #52CF4F!important;
+}
+
+.warning {
+  border: 1px solid #D91313!important;
+}
+
+
+/*стили-состояния-конец*/
+
+
+
+
+
 .content__header {
   display: flex;
   justify-content: space-between;
@@ -78,12 +95,4 @@
 
 .submit-container__form-submit {
   background: #AFAFAF;
-}
-
-.editing {
-  background-color: #52CF4F;
-}
-
-.red {
-  background-color: red;
 }

@@ -10,7 +10,7 @@ export default function Card({user}) {
   return (
     <>
       {user && <>
-        <div div className="content__list" >
+        {/* <div div className="main-content__list" > */}
           <div className="list__item">
 
             <p className="item__name text">ФИО: <span>{user?.name}</span></p>
@@ -22,7 +22,7 @@ export default function Card({user}) {
 
             </div>
           </div>
-        </div >
+        {/* </div > */}
 
       </>
       }

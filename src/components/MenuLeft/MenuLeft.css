@@ -1,0 +1,37 @@
+.page-container__left-menu {
+  width: 150px;
+  flex-shrink: 0;
+  min-height: 100%;
+  padding-top: 5vh;
+  background: #BDBDBD;
+}
+
+.left-menu__navbar {
+  width: 70%;
+  margin: auto;
+}
+
+.navbar__title {
+  margin: 0 0 10px;
+  width: fit-content;
+  font-family: Roboto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.navbar__navbar-btn-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 55px;
+  width: auto;
+}
+
+.navbar-btn-panel__btn {
+  padding: 4% 15%;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
