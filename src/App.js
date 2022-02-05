@@ -59,10 +59,12 @@ export default function App() {
               />
             )}
             {users && (
-              <Routes>     
+              <Routes>  
+                
                 {!isFetching && (
                   <Route path="/" element={<CardList users={users} />} />
                 )}
+
                 <Route
                   path="/profile/:id"
                   element={

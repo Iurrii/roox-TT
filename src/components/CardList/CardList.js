@@ -13,7 +13,7 @@ export default function CardList({ users }) {
 
       <div className="content__list">
         {users?.length > 0 &&
-          users.map((user, index) => <Card key={index} user={user} />)}
+          users.map((user) => <Card key={user?.id} user={user} />)}
       </div>
 
       <div className="content__search-report">
