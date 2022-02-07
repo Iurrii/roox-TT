@@ -2,9 +2,11 @@ import React from 'react';
 import Card from '../Card/Card';
 import '../CardList/CardList.css'
 
-export default function CardList({ users }) {
+export default function CardList({ users}) {
 
-  // console.log(users);
+
+
+
   return (
     <>
       <div className="content__header">
@@ -20,7 +22,7 @@ export default function CardList({ users }) {
         <p className="search-report__text">
           {users?.length > 0
             ? `Найдено ${users?.length} пользователей`
-            : `Пользователи не найдены`}{" "}
+            : `Пользователи не найдены`}
         </p>
       </div>
     </>
