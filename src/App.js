@@ -17,6 +17,9 @@ export default function App() {
   const [isFetching, setIsFetching] = useState(true);
   //выбранный пользователь
   const [selectedUser, setSelectedUser] = useState(null);
+  //переключатели сортировки
+  const [sortNameSwitch, setSortNameSwitch] = useState(false);
+  const [sortCitySwitch, setSortCitySwitch] = useState(false);
 
 
 
@@ -54,22 +57,37 @@ export default function App() {
 
     // console.log(...(arr.filter((item) => item.id === x)));
   }
-
-
+  
   function sortByName() {
-    setUsers([...users]?.sort(sortingName));
+    if (sortNameSwitch) {
+      setUsers([...users].reverse())
+      setSortNameSwitch(false)
+    }
+    if(!sortNameSwitch) {
+      setUsers([...users]?.sort(sortingName))
+      setSortNameSwitch(true)
+    }
+    function sortingName(x, y) {
+      return x.name.localeCompare(y.name);
+    }
   }
 
-
-  function sortingName(x, y) {
-    return x.name.localeCompare(y.name);
-  }
   function sortByCity() {
-    setUsers([...users]?.sort(sortingCity));
+    if (sortCitySwitch) {
+      setUsers([...users].reverse());
+      setSortCitySwitch(false)
+      
+    }
+    if (!sortCitySwitch) {
+      setUsers([...users]?.sort(sortingCity));
+      setSortCitySwitch(true)
+    }
+    function sortingCity(x, y) {
+      return x.address.city.localeCompare(y.address.city);
+    }
   }
-  function sortingCity(x, y) {
-    return x.address.city.localeCompare(y.address.city);
-  }
+
+
 
 
   return (
