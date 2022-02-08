@@ -27,10 +27,8 @@ export default function App() {
   useEffect(() => {
     (users && selectedUserId) !== null
       ? searchProfile(users, selectedUserId)
-      : console.log(5555);
+      : console.log();;
   }, [selectedUserId]);
-
-
 
   function getDateFromAPI() {
     fetch("https://jsonplaceholder.typicode.com/users")
@@ -57,11 +55,28 @@ export default function App() {
     // console.log(...(arr.filter((item) => item.id === x)));
   }
 
+
+  function sortByName() {
+    setUsers([...users]?.sort(sortingName));
+  }
+
+
+  function sortingName(x, y) {
+    return x.name.localeCompare(y.name);
+  }
+  function sortByCity() {
+    setUsers([...users]?.sort(sortingCity));
+  }
+  function sortingCity(x, y) {
+    return x.address.city.localeCompare(y.address.city);
+  }
+
+
   return (
     <BrowserRouter>
       <div className="App">
         <div className="page-container">
-          <MenuLeft />
+          <MenuLeft sortName={sortByName} sortCity={sortByCity} />
           <div className="page-container__content">
             {isFetching && (
               <FontAwesomeIcon

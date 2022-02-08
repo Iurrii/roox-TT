@@ -1,10 +1,15 @@
 import React from 'react';
 import Card from '../Card/Card';
 import '../CardList/CardList.css'
+import { useEffect, useState, } from "react";
 
-export default function CardList({ users}) {
+export default function CardList({ users }) {
 
+  const [listOfUsers, setListOfUsers] = useState(null);
 
+  useEffect(() => {
+    
+  })
 
 
   return (
