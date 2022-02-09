@@ -4,15 +4,6 @@ import '../MenuLeft/MenuLeft.css'
 export default function MenuLeft({ sortName, sortCity }) {
 
 
-  function sortByCity() {
-
-  }
-
-
-
-
-
-
   return (
   <>
     <div className="page-container__left-menu">
@@ -25,4 +16,5 @@ export default function MenuLeft({ sortName, sortCity }) {
       </nav>
     </div>
   </>
-  )}
+  )
+};

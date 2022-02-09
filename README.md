@@ -1,3 +1,6 @@
+Тестовое задание - React SPA.
+Вёрстка по макету, работа с API.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

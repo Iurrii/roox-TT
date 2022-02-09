@@ -1,15 +1,8 @@
 import React from 'react';
-import Card from '../Card/Card';
+import Card from '../Card/Card.jsx';
 import '../CardList/CardList.css'
-import { useEffect, useState, } from "react";
 
 export default function CardList({ users }) {
-
-  const [listOfUsers, setListOfUsers] = useState(null);
-
-  useEffect(() => {
-    
-  })
 
 
   return (
@@ -31,7 +24,7 @@ export default function CardList({ users }) {
         </p>
       </div>
     </>
-  );
+  )
 };
 
 

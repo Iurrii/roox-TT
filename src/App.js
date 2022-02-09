@@ -2,8 +2,8 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import Profile from "./components/Profile/Profile.js";
-import CardList from "./components/CardList/CardList.js";
+import Profile from "./components/Profile/Profile.jsx";
+import CardList from "./components/CardList/CardList.jsx";
 import MenuLeft from "./components/MenuLeft/MenuLeft.jsx";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -54,8 +54,6 @@ export default function App() {
     let x = Number(userId);
     let foundArray = arr.filter((item) => item.id === x);
     setSelectedUser(foundArray[0]);
-
-    // console.log(...(arr.filter((item) => item.id === x)));
   }
   
   function sortByName() {
@@ -128,5 +126,5 @@ export default function App() {
         </div>
       </div>
     </BrowserRouter>
-  );
-}
+  )
+};
